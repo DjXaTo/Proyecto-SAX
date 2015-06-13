@@ -27,9 +27,13 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        dial_ptoruta = new javax.swing.JDialog();
-        jComboBox1 = new javax.swing.JComboBox();
-        jButton10 = new javax.swing.JButton();
+        dial_buscarPtosRuta = new javax.swing.JDialog();
+        comboPtosRuta = new javax.swing.JComboBox();
+        btnBuscarPtosRuta = new javax.swing.JButton();
+        dial_ptosRuta = new javax.swing.JDialog();
+        panTabPtosRuta = new javax.swing.JScrollPane();
+        tabPtosRuta = new javax.swing.JTable();
+        btnCerrar = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panel_tour = new javax.swing.JPanel();
@@ -39,8 +43,6 @@ public class Interfaz extends javax.swing.JFrame {
         etiNomTour = new javax.swing.JLabel();
         etiPtosRuta = new javax.swing.JLabel();
         txtPtosRuta = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
         btnVerPtosRuta = new javax.swing.JButton();
         panel_clientes = new javax.swing.JPanel();
         panTablaClientes = new javax.swing.JScrollPane();
@@ -70,37 +72,77 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jTextField11 = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuArchivo = new javax.swing.JMenu();
+        Salir = new javax.swing.JMenuItem();
+        menuAyuda = new javax.swing.JMenu();
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboPtosRuta.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jButton10.setText(">>>");
+        btnBuscarPtosRuta.setText(">>>");
 
-        javax.swing.GroupLayout dial_ptorutaLayout = new javax.swing.GroupLayout(dial_ptoruta.getContentPane());
-        dial_ptoruta.getContentPane().setLayout(dial_ptorutaLayout);
-        dial_ptorutaLayout.setHorizontalGroup(
-            dial_ptorutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dial_ptorutaLayout.createSequentialGroup()
+        javax.swing.GroupLayout dial_buscarPtosRutaLayout = new javax.swing.GroupLayout(dial_buscarPtosRuta.getContentPane());
+        dial_buscarPtosRuta.getContentPane().setLayout(dial_buscarPtosRutaLayout);
+        dial_buscarPtosRutaLayout.setHorizontalGroup(
+            dial_buscarPtosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dial_buscarPtosRutaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(comboPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnBuscarPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        dial_ptorutaLayout.setVerticalGroup(
-            dial_ptorutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(dial_ptorutaLayout.createSequentialGroup()
+        dial_buscarPtosRutaLayout.setVerticalGroup(
+            dial_buscarPtosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dial_buscarPtosRutaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(dial_ptorutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox1)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
+                .addGroup(dial_buscarPtosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comboPtosRuta)
+                    .addComponent(btnBuscarPtosRuta, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabPtosRuta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        panTabPtosRuta.setViewportView(tabPtosRuta);
+
+        btnCerrar.setText("Cerrar");
+
+        javax.swing.GroupLayout dial_ptosRutaLayout = new javax.swing.GroupLayout(dial_ptosRuta.getContentPane());
+        dial_ptosRuta.getContentPane().setLayout(dial_ptosRutaLayout);
+        dial_ptosRutaLayout.setHorizontalGroup(
+            dial_ptosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dial_ptosRutaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(dial_ptosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dial_ptosRutaLayout.createSequentialGroup()
+                        .addComponent(panTabPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(dial_ptosRutaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnCerrar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        dial_ptosRutaLayout.setVerticalGroup(
+            dial_ptosRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dial_ptosRutaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panTabPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCerrar)
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         tablaTours.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -125,8 +167,6 @@ public class Interfaz extends javax.swing.JFrame {
 
         etiPtosRuta.setText("Puntos de ruta");
 
-        jLabel3.setText("jLabel3");
-
         btnVerPtosRuta.setText("VER");
 
         javax.swing.GroupLayout panel_tourLayout = new javax.swing.GroupLayout(panel_tour);
@@ -146,12 +186,8 @@ public class Interfaz extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(txtPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnVerPtosRuta))
-                    .addGroup(panel_tourLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnVerPtosRuta)))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         panel_tourLayout.setVerticalGroup(
             panel_tourLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,11 +203,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(etiPtosRuta)
                     .addComponent(txtPtosRuta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerPtosRuta))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panel_tourLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(131, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("TOURS", panel_tour);
@@ -352,7 +384,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(panel_viajesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("VIAJES", panel_viajes);
@@ -368,18 +400,20 @@ public class Interfaz extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        jMenu1.setText("File");
+        menuArchivo.setText("Archivo");
 
-        jMenuItem1.setText("jMenuItem1");
-        jMenu1.add(jMenuItem1);
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
+            }
+        });
+        menuArchivo.add(Salir);
 
-        jMenuItem2.setText("jMenuItem2");
-        jMenu1.add(jMenuItem2);
+        jMenuBar1.add(menuArchivo);
 
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        menuAyuda.setText("Ayuda");
+        jMenuBar1.add(menuAyuda);
 
         setJMenuBar(jMenuBar1);
 
@@ -400,6 +434,11 @@ public class Interfaz extends javax.swing.JFrame {
     private void txtNomTourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomTourActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomTourActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -438,31 +477,29 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Salir;
     private javax.swing.JButton btmMod;
     private javax.swing.JButton btnAniadir;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBuscarPtosRuta;
+    private javax.swing.JButton btnCerrar;
     private javax.swing.JButton btnElim;
     private javax.swing.JButton btnVerPtosRuta;
     private javax.swing.JButton btnViajesContratados;
-    private javax.swing.JDialog dial_ptoruta;
+    private javax.swing.JComboBox comboPtosRuta;
+    private javax.swing.JDialog dial_buscarPtosRuta;
+    private javax.swing.JDialog dial_ptosRuta;
     private javax.swing.JLabel etiApeClientes;
     private javax.swing.JLabel etiDniClientes;
     private javax.swing.JLabel etiNomClientes;
     private javax.swing.JLabel etiNomTour;
     private javax.swing.JLabel etiPtosRuta;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -470,15 +507,18 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JMenu menuArchivo;
+    private javax.swing.JMenu menuAyuda;
+    private javax.swing.JScrollPane panTabPtosRuta;
     private javax.swing.JScrollPane panTablaClientes;
     private javax.swing.JScrollPane panTablaTours;
     private javax.swing.JPanel panel_clientes;
     private javax.swing.JPanel panel_tour;
     private javax.swing.JPanel panel_viajes;
+    private javax.swing.JTable tabPtosRuta;
     private javax.swing.JTable tablaTours;
     private javax.swing.JTextField txtApeClientes;
     private javax.swing.JTextField txtDniClientes;
